@@ -1,4 +1,3 @@
 # provision
 
-TODO: Enter the cookbook description here.
-
+Our provisioning coobkook for our integration tests.

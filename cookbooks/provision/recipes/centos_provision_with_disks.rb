@@ -24,8 +24,9 @@ with_machine_options :bootstrap_options => {
                                  :paranoid => false,
                                },
                                bootstrap_ipv4: true,
+                               datastore: 'vsanDatastore',
 
-                               additional_disk_size_gb: [10, 20],
+                               additional_disk_size_gb: [10, 20]
                              }
 
 #

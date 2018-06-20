@@ -32,3 +32,19 @@ with_machine_options :bootstrap_options => {
 machine "testing-centos" do
   action :destroy
 end
+
+machine "testing-centos-with-iso" do
+  action :destroy
+end
+
+machine "testing-centos-with-additional-disks" do
+  action :destroy
+end
+
+machine "testing-centos-with-customization-spec" do
+  action :destroy
+end
+
+machine "testing-centos-with-named-customization-spec" do
+  action :destroy
+end

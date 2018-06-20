@@ -22,29 +22,25 @@ with_machine_options :bootstrap_options => {
                                  :user => 'root',
                                  :password => 'admini',
                                  :paranoid => false,
-                               }
-                             },
-                :sudo => true
+                               },
+                               bootstrap_ipv4: true,
+
+                               # These ip settings need to be updated based on the vCenter setup
+                               customization_spec: {
+                                 ipsettings: {
+                                   ip: '192.168.3.4',
+                                   subnetMask: '255.255.255.0',
+                                   gateway: ['192.168.3.1'],
+                                   dnsServerList: ['1.2.3.31', '1.2.3.41'],
+                                 },
+                                 domain: 'local',
+                               },
+                             }
 
 #
 # This is where you can declare the machine
 #
-machine "testing-centos" do
-  action :destroy
-end
-
-machine "testing-centos-with-iso" do
-  action :destroy
-end
-
-machine "testing-centos-with-additional-disks" do
-  action :destroy
-end
-
 machine "testing-centos-with-customization-spec" do
-  action :destroy
-end
-
-machine "testing-centos-with-named-customization-spec" do
-  action :destroy
+  tag "haha"
+  tag "customization-spec"
 end

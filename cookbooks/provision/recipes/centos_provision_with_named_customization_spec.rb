@@ -22,29 +22,17 @@ with_machine_options :bootstrap_options => {
                                  :user => 'root',
                                  :password => 'admini',
                                  :paranoid => false,
-                               }
-                             },
-                :sudo => true
+                               },
+                               bootstrap_ipv4: true,
+
+                               # A customization spec needs to be creaed in vCenter and put in here
+                               customization_spec: 'some named customization spec'
+                             }
 
 #
 # This is where you can declare the machine
 #
-machine "testing-centos" do
-  action :destroy
-end
-
-machine "testing-centos-with-iso" do
-  action :destroy
-end
-
-machine "testing-centos-with-additional-disks" do
-  action :destroy
-end
-
-machine "testing-centos-with-customization-spec" do
-  action :destroy
-end
-
 machine "testing-centos-with-named-customization-spec" do
-  action :destroy
+  tag "haha"
+  tag "named-customization-spec"
 end

@@ -22,29 +22,17 @@ with_machine_options :bootstrap_options => {
                                  :user => 'root',
                                  :password => 'admini',
                                  :paranoid => false,
-                               }
-                             },
-                :sudo => true
+                               },
+                               bootstrap_ipv4: true,
+
+                               # An iso needs to be uploaded to a datastore, and updated here
+                               initial_iso_file: '[vsanDatastore] 2fbd4e5a-c730-115a-e64f-0026b956b1e3/CentOS-7-x86_64-Minimal-1708.iso'
+                             }
 
 #
 # This is where you can declare the machine
 #
-machine "testing-centos" do
-  action :destroy
-end
-
 machine "testing-centos-with-iso" do
-  action :destroy
-end
-
-machine "testing-centos-with-additional-disks" do
-  action :destroy
-end
-
-machine "testing-centos-with-customization-spec" do
-  action :destroy
-end
-
-machine "testing-centos-with-named-customization-spec" do
-  action :destroy
+  tag "haha"
+  tag "iso"
 end

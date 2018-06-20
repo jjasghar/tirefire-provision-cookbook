@@ -22,29 +22,17 @@ with_machine_options :bootstrap_options => {
                                  :user => 'root',
                                  :password => 'admini',
                                  :paranoid => false,
-                               }
-                             },
-                :sudo => true
+                               },
+                               bootstrap_ipv4: true,
+                               datastore: 'vsanDatastore',
+
+                               additional_disk_size_gb: [10, 20]
+                             }
 
 #
 # This is where you can declare the machine
 #
-machine "testing-centos" do
-  action :destroy
-end
-
-machine "testing-centos-with-iso" do
-  action :destroy
-end
-
 machine "testing-centos-with-additional-disks" do
-  action :destroy
-end
-
-machine "testing-centos-with-customization-spec" do
-  action :destroy
-end
-
-machine "testing-centos-with-named-customization-spec" do
-  action :destroy
+  tag "haha"
+  tag "additional-disks"
 end

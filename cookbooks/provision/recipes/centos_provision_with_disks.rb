@@ -33,6 +33,7 @@ with_machine_options :bootstrap_options => {
 # This is where you can declare the machine
 #
 machine "testing-centos-with-additional-disks" do
+  recipe "provision::test_additional_disks"
   tag "haha"
   tag "additional-disks"
 end
